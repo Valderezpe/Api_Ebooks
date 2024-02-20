@@ -1,11 +1,11 @@
 const validateFieldTitle =(req, res , next) => {
     const {body} = req;
    
-    if(body.title == undefined)
+    if(body.title === undefined)
     { return res.status (400).json({message: 'the fild "title" is required'});
     }
 
-    if(body.title == ''){
+    if(body.title === ''){
          return res.status (400).json({message: 'title cannot  be empty'});
     }
     next();
@@ -15,7 +15,7 @@ const validateFieldName =(req, res , next) => {
     const {body} = req;
    
     if(body.name == undefined)
-    { return res.status (400).json({message: 'the fild "title" is required'});
+    { return res.status (400).json({message: 'the field "title" is required'});
     }
 
     if(body.name == ''){
